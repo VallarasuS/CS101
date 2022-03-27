@@ -18,3 +18,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.section-bg {
+  border-bottom: solid 1px whitesmoke;
+}

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import LandingBanner from '../components/LandingBanner'
+import LandingPage from '../components/LandingPage'
 import NavBar from '../components/NavBar'
 
 const Home: NextPage = () => {
@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <title>cs101.in - Learn to code. Get Hired.</title>
       </Head>
       <NavBar></NavBar>
-      <LandingBanner></LandingBanner>
+      <LandingPage></LandingPage>
     </div>
   )
 }
