@@ -1,20 +1,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import cover from '../../public/images/cover.jpg';
 
 const LandingBanner: NextPage = () => {
 
     return (
-        <header className="bg-cover">
-            <div className='container mx-auto'>
-                <div className='container mx-auto'>
-                    <h1 className="text-3xl font-bold">
-                        Learn to code
-                    </h1>
-                    <h1 className="text-3xl font-bold">
-                        Get hired!
-                    </h1>
-                </div>
+        <header className="flex flex-row flex-wrap justify-around items-center p-0 sm:p-10">
+            <span className="h-auto p-10 text-3xl font-bold text-center">
+                Learn to code
+                <br/>
+                Get hired!
+            </span>
+            <div className='h-96 w-auto max-w-md px-8 md:h-auto relative'>
+                <Image className='rounded-md' src={cover}></Image>
             </div>
         </header>
     );

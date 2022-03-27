@@ -10,3 +10,7 @@
 
 - `npm i`
 - `npm run dev`
+
+### Release Build
+
+- `next build && next export -o ../docs/`
