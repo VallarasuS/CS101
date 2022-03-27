@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import LandingBanner from './components/LandingBanner'
-import NavBar from './components/NavBar'
+import LandingBanner from '../components/LandingBanner'
+import NavBar from '../components/NavBar'
 
 const Home: NextPage = () => {
   return (
