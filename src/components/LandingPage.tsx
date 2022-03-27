@@ -41,7 +41,7 @@ const LandingPage: NextPage = () => {
                     How does it work?
                 </span>
                 <span className="h-auto p-10 text-base md:text-2xl text-center">
-                    Technology trends change rapidly, what doesn`&quot;`t change is the process of learning.
+                    Technology trends change rapidly, what doesn&quot;t change is the process of learning.
                     <br />
                     We will impart decades of knowledge in learning,
                     <br />
@@ -54,7 +54,7 @@ const LandingPage: NextPage = () => {
 
                 <ul className="list-none">
                     {
-                        takeAways.map((i,n) => {
+                        takeAways.map((i, n) => {
                             return (
                                 <li key={n.toString()} className="my-2">
                                     <div className="flex flex-row items-center">
@@ -70,6 +70,10 @@ const LandingPage: NextPage = () => {
                         })
                     }
                 </ul>
+
+                <button className="bg-orange-600 rounded text-white px-10 py-5 mt-10">
+                    Enroll Now
+                </button>
 
             </section>
         </div>
