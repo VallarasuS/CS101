@@ -30,7 +30,7 @@ const LandingPage: NextPage = () => {
                     We are here to help.
                 </span>
 
-                <button className="bg-orange-600 rounded text-white px-10 py-5">
+                <button className="bg-orange-600 rounded text-white px-10 py-5 my-10">
                     Enroll Now
                 </button>
             </section>
@@ -71,7 +71,7 @@ const LandingPage: NextPage = () => {
                     }
                 </ul>
 
-                <button className="bg-orange-600 rounded text-white px-10 py-5 mt-10">
+                <button className="bg-orange-600 rounded text-white px-10 py-5 my-10">
                     Enroll Now
                 </button>
 
