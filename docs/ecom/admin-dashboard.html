@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Admin - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <style>
+        body { background: #0a0a0a; }
+        .admin-layout { display: flex; height: 100vh; overflow: hidden; }
+        .admin-sidebar { width: 250px; background: #16181c; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; }
+        .admin-sidebar .logo { font-size: 24px; font-weight: bold; text-align: center; padding: 20px; border-bottom: 1px solid var(--border-color); color: var(--primary-color); }
+        .admin-sidebar a { display: block; padding: 15px 20px; color: var(--text-color); border-bottom: 1px solid #222; text-decoration: none; }
+        .admin-sidebar a:hover, .admin-sidebar a.active { background: #333; }
+        
+        .admin-content { flex-grow: 1; padding: 30px; overflow-y: auto; }
+        .admin-header { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        
+        .stat-grid { display: flex; gap: 20px; margin-bottom: 30px; }
+        .stat-card { flex: 1; background: #16181c; padding: 20px; border-radius: var(--radius); border: 1px solid var(--border-color); }
+        .stat-card h4 { margin: 0 0 10px 0; color: var(--muted-text); border: none; }
+        .stat-card .value { font-size: 32px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="admin-layout">
+        
+        <!-- SIDEBAR -->
+        <div class="admin-sidebar" id="admin-sidebar" data-testid="admin-sidebar">
+            <div class="logo">NEO ADMIN</div>
+            <a id="nav-admin-dash" data-testid="nav-admin-dash" href="./admin-dashboard.html" class="active">Dashboard</a>
+            <a id="nav-admin-prod" data-testid="nav-admin-prod" href="./admin-products.html">Products</a>
+            <a id="nav-admin-ord" data-testid="nav-admin-ord" href="#">Orders</a>
+            <a id="nav-admin-cust" data-testid="nav-admin-cust" href="#">Customers</a>
+            <a id="nav-admin-settings" data-testid="nav-admin-settings" href="#">Settings</a>
+            <div style="flex-grow: 1;"></div>
+            <a id="nav-admin-logout" data-testid="nav-admin-logout" href="./index.html" style="background: #a10000; text-align: center;">Logout</a>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="admin-content">
+            <div class="admin-header">
+                <h2>Dashboard Overview</h2>
+                <div>
+                    <span style="color: var(--muted-text); margin-right: 15px;">Logged in as SuperAdmin</span>
+                </div>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-card" id="stat-sales" data-testid="stat-sales">
+                    <h4>Total Sales</h4>
+                    <div class="value">$24,590.50</div>
+                </div>
+                <div class="stat-card" id="stat-orders" data-testid="stat-orders">
+                    <h4>Orders Today</h4>
+                    <div class="value">142</div>
+                </div>
+                <div class="stat-card" id="stat-users" data-testid="stat-users">
+                    <h4>Active Users</h4>
+                    <div class="value">1,029</div>
+                </div>
+                <div class="stat-card" id="stat-conv" data-testid="stat-conv">
+                    <h4>Conversion Rate</h4>
+                    <div class="value">3.2%</div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 100%;">
+                <h3>Recent Activity</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 10px 0; border-bottom: 1px solid #333;">Order #ORD-9281 was placed by John Doe</li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid #333;">Product 'Gaming Console' stock reached 'Low' threshold.</li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid #333;">Refund processed for Order #ORD-1102</li>
+                    <li style="padding: 10px 0;">New customer registration: jane.smith@example.com</li>
+                </ul>
+            </div>
+            
+        </div>
+
+    </div>
+
+<div class="footer">
+
+        <hr style="margin: 50px 0px; border-color: black;">
+
+        <div class="footer-story">
+
+            <p>
+                Discover our E-Commerce website for automation testing practice, designed as a realistic online shopping
+                platform to help testers hone their skills. This free demo website for automation testing serves as an
+                ideal
+                sample web application for automation testing and sample web application for automation testing
+                practice,
+                featuring common elements like product listings, shopping carts, checkout processes, user
+                authentication,
+                dynamic content, and responsive design.
+            </p>
+
+            <p>
+                Whether you're working with Selenium, Cypress, Playwright, or other tools, our site offers a safe
+                environment to build and refine UI Test Automation Playground-style scenarios without risking real
+                systems.
+                It's one of the top automation testing practice websites free options available, and it also doubles as
+                a
+                great resource for dummy sites for manual testing, allowing beginners and professionals alike to explore
+                UI
+                interactions, form validations, and end-to-end flows at no cost.
+            </p>
+
+        </div>
+
+        <div class="footer-menu flex-row flex-start">
+
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">About
+                    Us</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./about.html">Our Story</a>
+                    <a href="./team.html">Team</a>
+                    <a href="./partners.html">Partners</a>
+                    <a href="./press.html">Press</a>
+                    <a href="./affiliates.html">Affiliates</a>
+                    <a href="./careers.html">Careers</a>
+                    <a href="./pages.html">All Pages</a>
+                </div>
+
+            </div>
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">Customer
+                    Support</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./refund-policy.html">Payments and Refund</a>
+                    <a href="./shipping-policy.html">Shipping Policy</a>
+                    <a href="./order-tracking.html">Track your orders</a>
+                    <a href="./faq.html">FAQ</a>
+                    <a href="./store-locations.html">Store Locations</a>
+                </div>
+            </div>
+
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">Contact Us</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./contact.html">Email</a>
+                    <a href="./chat.html">Chat</a>
+                    <a href="./raise-ticket.html">Raise a Ticket</a>
+                    <a href="./call-us.html">Call Us</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

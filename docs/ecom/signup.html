@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo - Sign-up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="card" style="min-width: 400px; width: auto; max-width: 550px; margin: auto; margin-top: 30px;">
+
+            <div class="title text-center">
+                <h2>Neo</h2>
+                <div class="subtitle">create an account</div>
+            </div>
+
+            <form class="field-group hidden visible" id="signup-name-form" name="signup-name-form" data-testid="signup-name-form"
+                onsubmit="return false">
+                <input id="signup-fname" name="signup-fname" data-testid="signup-fname" autocomplete="off" type="text"
+                    placeholder="First Name" required="" autofocus="">
+
+                <input id="signup-lname" name="signup-lname" data-testid="signup-lname" type="text"
+                    placeholder="Last Name" required="">
+            </form>
+
+            <form class="field-group hidden" id="signup-dob-form" name="signup-dob-form" data-testid="signup-dob-form"
+                onsubmit="return false">
+
+                <div class="flex-row">
+
+                    <select id="auth-dob-day" name="auth-dob-day" data-testid="auth-dob-day" autocomplete="off"
+                        placeholder="Day" required="" autofocus="">
+                        <option value="" disabled selected hidden>Day</option>
+                    </select>
+
+                    <select id="auth-dob-month" name="auth-dob-month" data-testid="auth-dob-month" placeholder="Month"
+                        required="">
+                        <option value="" disabled selected hidden>Month</option>
+                    </select>
+
+                    <input id="auth-dob-year" name="auth-dob-year" data-testid="auth-dob-year" placeholder="Year"
+                        required="">
+                </div>
+
+                <select id="signup-gender" name="signup-gender" data-testid="signup-gender" required>
+                    <option value="" disabled selected hidden>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </form>
+
+            <form class="field-group hidden" id="signup-email-form" name="signup-email-form" data-testid="signup-email-form"
+                onsubmit="return false">
+                <input id="signup-email" data-testid="signup-email" name="signup-email" autocomplete="off" type="text"
+                    placeholder="Email" required="" autofocus="">
+
+                <input id="signup-pass" data-testid="signup-pass" name="signup-pass" type="password"
+                    placeholder="Password" required="">
+
+                <input id="signup-pass-confirm" data-testid="signup-pass-confirm" name="signup-pass-confirm" type="password"
+                    placeholder="Confirm Password" required="">
+            </form>
+
+            <div class="flex-row flex-end">
+                <button type="button" id="signup-button-next" name="signup-button-next" data-testid="signup-button-next"
+                    class="hidden visible" onclick="next()">Next</button>
+            </div>
+
+            <form class="field-group hidden" id="signup-success-form" name="signup-success-form" data-testid="signup-success-form"
+                onsubmit="return false">
+
+                <div class="text-center">
+                    <label>Account created successfully</label>
+                    <br>
+                    <label>Please <a href="./login.html">login</a> to proceed.</label>
+                </div>
+
+            </form>
+
+        </div>
+    </main>
+<div class="footer">
+
+        <hr style="margin: 50px 0px; border-color: black;">
+
+        <div class="footer-story">
+
+            <p>
+                Discover our E-Commerce website for automation testing practice, designed as a realistic online shopping
+                platform to help testers hone their skills. This free demo website for automation testing serves as an
+                ideal
+                sample web application for automation testing and sample web application for automation testing
+                practice,
+                featuring common elements like product listings, shopping carts, checkout processes, user
+                authentication,
+                dynamic content, and responsive design.
+            </p>
+
+            <p>
+                Whether you're working with Selenium, Cypress, Playwright, or other tools, our site offers a safe
+                environment to build and refine UI Test Automation Playground-style scenarios without risking real
+                systems.
+                It's one of the top automation testing practice websites free options available, and it also doubles as
+                a
+                great resource for dummy sites for manual testing, allowing beginners and professionals alike to explore
+                UI
+                interactions, form validations, and end-to-end flows at no cost.
+            </p>
+
+        </div>
+
+        <div class="footer-menu flex-row flex-start">
+
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">About
+                    Us</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./about.html">Our Story</a>
+                    <a href="./team.html">Team</a>
+                    <a href="./partners.html">Partners</a>
+                    <a href="./press.html">Press</a>
+                    <a href="./affiliates.html">Affiliates</a>
+                    <a href="./careers.html">Careers</a>
+                    <a href="./pages.html">All Pages</a>
+                </div>
+
+            </div>
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">Customer
+                    Support</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./refund-policy.html">Payments and Refund</a>
+                    <a href="./shipping-policy.html">Shipping Policy</a>
+                    <a href="./order-tracking.html">Track your orders</a>
+                    <a href="./faq.html">FAQ</a>
+                    <a href="./store-locations.html">Store Locations</a>
+                </div>
+            </div>
+
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">Contact Us</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./contact.html">Email</a>
+                    <a href="./chat.html">Chat</a>
+                    <a href="./raise-ticket.html">Raise a Ticket</a>
+                    <a href="./call-us.html">Call Us</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        context = signup()
+        context.populate()
+
+        function next() {
+            context.next()
+        }
+
+    </script>
+
+</body>
+
+</html>

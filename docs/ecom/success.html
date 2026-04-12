@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo - Order Success</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <style>
+        .success-box { background: var(--card-bg); padding: 50px; border-radius: var(--radius); text-align: center; margin-top: 50px; }
+        .success-icon { font-size: 60px; color: var(--primary-color); margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="flex-row">
+            <div class="flex-row between fill-width" style="margin: auto;">
+                <div class="flex-row" style="align-items: center;">
+                    <a id="nav-home" name="nav-home" data-testid="nav-home" style="font-weight: bold; font-size: 18px;" href="./index.html">NEO</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="success-box card" id="success-container" data-testid="success-container">
+            <div class="success-icon" id="success-icon" data-testid="success-icon">✓</div>
+            <h2 id="success-title" data-testid="success-title">Order Placed Successfully!</h2>
+            <p>Thank you for shopping with Neo. Your order has been registered.</p>
+            
+            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: var(--radius); margin: 30px auto; width: 50%;">
+                <p style="margin: 0;"><strong>Order Reference #:</strong> <span id="order-ref" data-testid="order-ref"></span></p>
+            </div>
+
+            <a href="./orders.html">
+                <button type="button" id="btn-view-orders" name="btn-view-orders" data-testid="btn-view-orders">View My Orders</button>
+            </a>
+            <a href="./index.html">
+                <button type="button" id="btn-continue-shop" name="btn-continue-shop" data-testid="btn-continue-shop" style="background: var(--border-color); color: white;">Continue Shopping</button>
+            </a>
+        </div>
+    </main>
+<div class="footer">
+
+        <hr style="margin: 50px 0px; border-color: black;">
+
+        <div class="footer-story">
+
+            <p>
+                Discover our E-Commerce website for automation testing practice, designed as a realistic online shopping
+                platform to help testers hone their skills. This free demo website for automation testing serves as an
+                ideal
+                sample web application for automation testing and sample web application for automation testing
+                practice,
+                featuring common elements like product listings, shopping carts, checkout processes, user
+                authentication,
+                dynamic content, and responsive design.
+            </p>
+
+            <p>
+                Whether you're working with Selenium, Cypress, Playwright, or other tools, our site offers a safe
+                environment to build and refine UI Test Automation Playground-style scenarios without risking real
+                systems.
+                It's one of the top automation testing practice websites free options available, and it also doubles as
+                a
+                great resource for dummy sites for manual testing, allowing beginners and professionals alike to explore
+                UI
+                interactions, form validations, and end-to-end flows at no cost.
+            </p>
+
+        </div>
+
+        <div class="footer-menu flex-row flex-start">
+
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">About
+                    Us</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./about.html">Our Story</a>
+                    <a href="./team.html">Team</a>
+                    <a href="./partners.html">Partners</a>
+                    <a href="./press.html">Press</a>
+                    <a href="./affiliates.html">Affiliates</a>
+                    <a href="./careers.html">Careers</a>
+                    <a href="./pages.html">All Pages</a>
+                </div>
+
+            </div>
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">Customer
+                    Support</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./refund-policy.html">Payments and Refund</a>
+                    <a href="./shipping-policy.html">Shipping Policy</a>
+                    <a href="./order-tracking.html">Track your orders</a>
+                    <a href="./faq.html">FAQ</a>
+                    <a href="./store-locations.html">Store Locations</a>
+                </div>
+            </div>
+
+            <div class="card" style="background: transparent;">
+                <h4 class="footer-label">Contact Us</h4>
+
+                <div class="flex-col gap-10">
+                    <a href="./contact.html">Email</a>
+                    <a href="./chat.html">Chat</a>
+                    <a href="./raise-ticket.html">Raise a Ticket</a>
+                    <a href="./call-us.html">Call Us</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        // Generate random order id
+        document.getElementById('order-ref').innerText = "ORD-" + Math.floor(Math.random() * 900000 + 100000);
+    </script>
+
+</body>
+</html>
